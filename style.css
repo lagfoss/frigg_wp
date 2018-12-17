@@ -1,0 +1,631 @@
+/*
+Theme Name: Frigg
+Author: Lagfoss - Den Færøske Multimediedesigner
+Description: Frigg template converted to WordPress
+Version: 0.0.1
+Tags: frigglauget
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  background-color: rgba(136, 6, 6, 0.9);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Skrifttype og forskellige størrelser */
+
+@font-face {
+  font-family: 'ForgottenUncial';
+  src: url('<?php echo get_bloginfo('template_directory'); ?>/assets/font/ForgottenUncial.woff') format('woff'),
+       url('<?php echo get_bloginfo('template_directory'); ?>/assets/font/ForgottenUncial.ttf') format('truetype'),
+       url('<?php echo get_bloginfo('template_directory'); ?>/assets/font/ForgottenUncial.svg#ForgottenUncial') format('svg');
+  src: url('<?php echo get_bloginfo('template_directory'); ?>/assets/font/forgotten_uncial.eot');
+  src: url('<?php echo get_bloginfo('template_directory'); ?>/assets/font/forgotten_uncial.woff2') format('woff2'),
+       url('<?php echo get_bloginfo('template_directory'); ?>/assets/font/forgotten_uncial.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: ForgottenUncial;
+  font-size: 3vw;
+  margin: auto;
+  letter-spacing: 1.2pt;
+  color: #ffffff;
+  text-shadow: 00px 0px 8px #000000;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vw;
+  letter-spacing: 1.2pt;
+}
+
+h2 a {
+  color: black;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3vw;
+}
+
+.wp-caption-text {
+  font-size: 1.1vw;
+  font-style: italic;
+}
+
+a {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #068806;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+    color: #068888;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* Header med logo og billede */
+
+header {
+  display: flex;
+  background-color: #ffffff;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  width: 11%;
+  height: auto;
+  margin: 10px;
+  z-index: 2;
+}
+
+.logo img {
+  width: 100%;
+  align-self: center;
+}
+
+.header {
+  display: flex;
+  height: auto;
+  width: 89%;
+  align-self: center;
+  padding: 5px 0 5px 0;
+  z-index: 2;
+}
+
+/* Navigationen med searchbar */
+
+nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  box-shadow:0px 4px 8px #880606;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  list-style-type: none;
+}
+
+nav a, input.form-control {
+  font-family: ForgottenUncial;
+  display: block;
+  color: #880606;
+  margin: 10px 10px 10px 5px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3vw;
+  font-weight: bold;
+  letter-spacing: 1.2pt;
+  border-left: 2px solid #060688;
+  padding-left: 20px;
+}
+
+nav a:nth-child(2) {
+    border-left: none;
+}
+
+nav .icon {
+  display: none;
+}
+
+nav a:hover {
+  color: #068888;
+  text-decoration: none;
+}
+
+input.form-control {
+  display: inline-block;
+  border: 1px solid #060688;
+  box-sizing: border-box;
+  color: #880606;
+  text-align: left;
+  }
+
+/* Sidens hovedindehold */
+
+  main {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto auto auto;
+    width: 100%;
+  }
+
+  .welcome {
+    width: 80%;
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    .column {
+      float: left;
+      margin-top: 40px;
+  }
+
+  .left, .right {
+    width: 25%;
+  }
+
+  .middle {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-height: 500px;
+  }
+
+.sidebar_a {
+  background-color: #ffffff;
+  margin: 0px 0 auto 0;
+  padding: 5px;
+  width: 80%;
+  height: 100%;
+  bottom: 0;
+  text-align: center;
+  border-right: thin inset #060688;
+  border-radius: 5px 0 0 5px;
+  float: right;
+}
+
+.sponsor {
+  width: 100%;
+}
+
+.sponsor img {
+  width: 80%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.artikel {
+  margin: 0px 0 auto 0;
+  padding: 10px 10px 0 10px;
+  background-color: #ffffff;
+  width: 100%;
+  }
+
+  .blog-post-meta {
+    font-style: italic;
+    font-size: 1vw;
+    opacity: 0.5
+  }
+
+.thumbnail{
+  width: 33%;
+}
+
+.thumbnail img {
+  width: 80%;
+  height: auto;
+}
+
+.front_cont{
+  width: 64%;
+}
+
+  .pager {
+    list-style-type: none;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .pager a {
+    margin: 10px;
+    color: #880606;
+    display: block;
+    width: auto;
+    font-size: 1.5vw;
+    letter-spacing: 1.2pt;
+  }
+
+  .sidebar_b {
+    background-color: #ffffff;
+    margin: 0px 0 auto 0;
+    padding: 5px;
+    width: 80%;
+    height: 100%;
+    bottom: 0;
+    text-align: center;
+    border-left: thin outset #060688;
+    border-radius: 0 5px 5px 0;
+    float: left;
+  }
+
+  .facebook {
+    width: 100%;
+  }
+
+/* Footer med kontaktoplysninger, logo og socialemedier */
+
+footer {
+  background-color: #880606;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.3pt;
+  line-height: 24pt;
+  color: #fff;
+  font-weight: 300;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 235px;
+  margin: 10px auto 0px auto;
+  border: hidden;
+
+}
+
+.indhold {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+}
+
+footer a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Er blevet brugt til logo med copyright */
+.foot_logo {
+  width: 50%;
+}
+
+.copyright {
+    position: relative;
+    text-align: center;
+}
+
+.txt_under {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socialmedier{
+  width: 100%;
+  text-align: right;
+}
+
+/* Er blevet brugt til alle socialemedier i footer */
+.social{
+  width: 17%;
+  height: auto;
+  margin: 0px 0 0 20px;
+}
+
+.socialmedier a:link {
+  text-decoration: none;
+}
+
+
+/* Header og nav responsive */
+@media screen and (max-width: 820px) {
+/* nedenstående forsvinder når ovenstående sker */
+ nav a {
+   display: none;
+   border: none;
+ }
+
+ nav input.form-control { display: none;}
+
+ /* Burger menu bliver synlig */
+ nav a.icon {
+   position: relative;
+   margin: auto;
+   font-size: 40px;
+   display: block;
+   padding: 0;
+ }
+
+ nav.responsive {position: relative;
+ background-color: #ffffff;}
+
+ nav.responsive .icon {
+   position: relative;
+   margin-top: auto;
+   font-size: 40px;
+   display: block;
+   width: 100%;
+ }
+
+ nav.responsive a, nav.responsive input.form-control {
+   float: none;
+   text-align: center;
+   display: block;
+   font-size: 16px;
+   margin: auto auto 20px auto;
+   padding: 0;
+   z-index: 2;
+ }
+
+nav.responsive input.form-control{
+  width: 20%;
+}
+
+ nav.responsive {
+   display: block;
+   position: sticky;
+   padding-bottom: 10px;
+ }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 720px) {
+
+  .footer_left,
+  .footer_middle,
+  .footer_right{
+    width: 32%;
+ }
+
+ .footer_left{
+   margin-right: 2%;
+ }
+
+ .footer_right{
+   margin-left: 2%;
+ }
+}
+/* Desktop Styles slut */
+
+/* Tablet Styles */
+@media only screen and (min-width: 420px) and (max-width: 719px) {
+
+  /* Skrift typer til tablet*/
+    h1 {
+      font-size: 4.5vw;
+    }
+
+    h2 {
+      font-size: 3vw;
+    }
+
+    h3 {
+      font-size: 1.8vw;
+    }
+
+    p {
+      font-size: 1.8vw;
+    }
+
+    .wp-caption-text {
+      font-size: 1.6vw;
+    }
+
+    .blog-post-meta {
+      font-size: 1.6vw;
+    }
+
+    .pager a {
+      font-size: 1.8vw;
+    }
+
+/* Header og logo i tablet */
+    header {
+      overflow: hidden;
+      width: 100%;
+    }
+
+     .logo {
+       width: 60px;
+       height: auto;
+     }
+
+     .logo img {
+       width: 60px;
+     }
+
+/* Kasserne i footeren, nu lægger de sig under hinanden */
+  .footer_left,
+  .footer_middle,
+  .footer_right{
+    width: 100%;
+    margin: 10px 0 10px 0;
+ }
+
+ .footer_left{
+   order: 1;
+   text-align: center;
+ }
+ .footer_middle{
+   order: 3;
+ }
+
+ .footer_right{
+   order: 2;
+   text-align: center;
+ }
+
+ .socialmedier{
+   margin:auto;
+   text-align:center;
+ }
+
+ .social{
+   float: none;
+   margin: 0 10px 0 10px;
+ }
+
+}
+/* Tablet Styles slut */
+
+/* Mobile Styles */
+@media only screen and (max-width: 420px) {
+
+  /* Skrift typer til mobile*/
+    h1 {
+      font-size: 7vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+
+    h3 {
+      font-size: 2.2vw;
+    }
+
+    p {
+      font-size: 2.2vw;
+    }
+
+    .wp-caption-text {
+      font-size: 2.0vw;
+    }
+
+    .blog-post-meta {
+      font-size: 2vw;
+    }
+
+    .pager a {
+      font-size: 2.2vw;
+    }
+
+/* Header og logo i mobile */
+    header {
+      overflow: hidden;
+      width: 100%;
+    }
+
+   .logo {
+     width: 50px;
+     height: auto;
+   }
+
+   .logo img {
+     width: 50px;
+    }
+
+    .column {
+      float:none;
+    }
+
+    .left, .right {
+      width: 80%;
+      margin: 0 auto 0 auto;
+    }
+
+    .middle {
+      width: 80%;
+      margin: 0 auto 0 auto;
+    }
+
+  .runestone {
+    display: none;
+  }
+
+  .sidebar_a,
+  .artikel,
+  .sidebar_b{
+    width: 100%;
+    margin: 10px auto 0px auto;
+    min-height: auto;
+    border: hidden;
+    padding: 0 10px 0 10px;
+    border-radius: 0;
+  }
+
+  .left {
+    order: 3;
+    margin-bottom: 10px;
+  }
+
+  .middle {
+    order: 1;
+    margin-top: 20px;
+  }
+
+  .right {
+    order: 2;
+    margin-bottom: 10px;
+  }
+
+    /* Kasserne i footeren, nu lægger de sig under hinanden */
+     .footer_left,
+     .footer_middle,
+     .footer_right{
+       width: 100%;
+       margin: 10px 0 10px 0;
+    }
+
+    .footer_left{
+      order: 4;
+      text-align: center;
+    }
+    .footer_middle{
+      order: 6;
+    }
+    .footer_right{
+      order: 5;
+      text-align: center;
+    }
+
+    .socialmedier{
+      margin:auto;
+      text-align:center;
+    }
+
+    .social{
+      float: none;
+      margin: 0 10px 0 10px;
+    }
+}
+/* Mobile Styles slut */
