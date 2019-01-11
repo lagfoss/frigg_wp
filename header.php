@@ -32,9 +32,7 @@
         <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/header.png" class="header" alt="Frigglauget header">
     </header>
     <nav id="myNav">
-      <a href="javascript:void(0);" class="icon" onclick="responsiveNav()"><i class="fas fa-bars"></i></a>
       <?php quadmenu(array("theme_location" => "menu", "theme" => "default_theme")); ?>
-      <?php get_search_form(); ?>
     </nav>
     <main>
       <section class="welcome">
